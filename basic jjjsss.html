@@ -1,0 +1,43 @@
+
+<script>
+            var hotel = {
+                name: 'Park',
+                rooms: 120,
+                booked : 77,
+                checkAvailability: function() {
+                return this.rooms - this.booked;
+                }
+                } ;
+                var elName = document.getElementById('hotelname');
+                elName.textContent = hotel.name;
+                var elRooms = document.getElementById('rooms');
+                elRooms.textContent = hotel.checkAvailability(); 
+            </script>
+
+
+
+<script>
+    var score = 75;
+    var msg;
+    if (score>=50){
+        msg = 'Congratulations!';
+        msg += 'Proceed to the next round.';
+    }
+    var el = document.getElementById('answer');
+    el.textContent = msg;
+    </script>
+
+
+<script>
+    var score = 75;
+    var msg;
+    function congratulate() {
+        msg = 'Congratulations!';
+    }
+    if (score>=50){
+        congratulate();
+        msg += 'Proceed to the next round.';
+    }
+    var el = document.getElementById('answer');
+    el.innerHTML = msg;
+    </script>
